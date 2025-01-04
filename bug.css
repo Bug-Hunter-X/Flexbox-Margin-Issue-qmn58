@@ -1,0 +1,15 @@
+The following CSS code causes an unexpected layout issue in some browsers:
+
+```css
+div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div > * {
+  margin: 10px;
+}
+```
+
+This code attempts to center a child element within a flex container and adds a margin around it. However, the margin can cause the container to expand beyond its intended size, leading to unexpected spacing issues.
