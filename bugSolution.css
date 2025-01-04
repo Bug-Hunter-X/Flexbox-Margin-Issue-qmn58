@@ -1,0 +1,24 @@
+The issue can be resolved by using `margin: 0;` on the parent element, and using padding on the child instead.  This avoids the extra space added by margins while achieving the desired spacing around the child element:
+
+```css
+div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+div > * {
+  padding: 10px;
+}
+```
+Alternatively, you can use the `gap` property (if supported by the target browsers) to add space between flex items without affecting the container's size:
+
+```css
+div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+```
